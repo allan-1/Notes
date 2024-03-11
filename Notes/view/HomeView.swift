@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
-        NavigationStack{
+        VStack{
             
-        }.navigationTitle("Saved Notes").navigationBarItems(trailing: addNotes)
+        }.navigationTitle("Saved Notes").navigationBarTitleDisplayMode(.large).navigationBarItems(trailing: addNotes).navigationBarBackButtonHidden(true)
     }
     
     var addNotes: some View{
-        Image(systemName: "plus")
+        Button(action: navigateAddNotes){
+            Image(systemName: "plus")
+        }
+    }
+    
+    func navigateAddNotes(){
+        router.navigate(to: .AddNotes, removeLast: false)
     }
 }
 

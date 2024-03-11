@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Welcome: View {
+    //router
+    @EnvironmentObject var router: Router
+    
     @State private var name: String = ""
     @FocusState private var emailFieldIsFocused: Bool
     
@@ -20,13 +23,15 @@ struct Welcome: View {
             Button(action: continueToHome){
                 Text("Start")
             }.buttonStyle(.borderedProminent).padding()
-        }
+        }.navigationBarBackButtonHidden(true)
+    }
+    
+    func continueToHome(){
+        router.navigate(to: .HomeView, removeLast: true)
     }
 }
 
-func continueToHome(){
-    
-}
+
 
 #Preview {
     Welcome()

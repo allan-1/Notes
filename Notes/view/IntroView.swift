@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct IntroView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack{
             Image("notes").resizable().aspectRatio(contentMode: .fit).padding()
@@ -19,11 +22,12 @@ struct IntroView: View {
             }.buttonStyle(.borderedProminent)
         }
     }
+    
+    func nextPage(){
+        router.navigate(to: .WelcomeView, removeLast: true)
+    }
 }
 
-func nextPage(){
-    
-}
 
 #Preview {
     IntroView()

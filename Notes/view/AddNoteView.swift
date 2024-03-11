@@ -29,7 +29,7 @@ struct AddNoteView: View {
             TextField("Write down something...", text: $notesText).focused($notesTextFocus)
             Spacer()
         }
-        .padding()
+        .padding().navigationTitle("Note").navigationBarTitleDisplayMode(.inline)
     }
     
     func saveNote(){
