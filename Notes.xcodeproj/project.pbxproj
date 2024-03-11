@@ -11,6 +11,7 @@
 		FA0587232B979F7300A1F9C5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0587222B979F7300A1F9C5 /* HomeView.swift */; };
 		FA11F8B62B982BB300C69531 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F8B52B982BB300C69531 /* NotesModel.swift */; };
 		FA11F8B82B982D4E00C69531 /* NotesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F8B72B982D4E00C69531 /* NotesStore.swift */; };
+		FA7C1E942B9F4405005E2E59 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */; };
 		FAD72CD02B89DE3100EFACDD /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD72CCF2B89DE3100EFACDD /* NotesApp.swift */; };
 		FAD72CD22B89DE3100EFACDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD72CD12B89DE3100EFACDD /* ContentView.swift */; };
 		FAD72CD42B89DE3400EFACDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD72CD32B89DE3400EFACDD /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		FA0587222B979F7300A1F9C5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA11F8B52B982BB300C69531 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		FA11F8B72B982D4E00C69531 /* NotesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStore.swift; sourceTree = "<group>"; };
+		FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		FAD72CCC2B89DE3100EFACDD /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD72CCF2B89DE3100EFACDD /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		FAD72CD12B89DE3100EFACDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA7C1E952B9F44E9005E2E59 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		FAD72CC32B89DE3100EFACDD = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +70,7 @@
 		FAD72CCE2B89DE3100EFACDD /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				FA7C1E952B9F44E9005E2E59 /* utils */,
 				FAD72CDE2B89DFA500EFACDD /* model */,
 				FAD72CDD2B89DF9400EFACDD /* view */,
 				FAD72CD32B89DE3400EFACDD /* Assets.xcassets */,
@@ -85,6 +95,7 @@
 				FAD72CDF2B89E0E000EFACDD /* IntroView.swift */,
 				FA0587202B974B1400A1F9C5 /* Welcome.swift */,
 				FA0587222B979F7300A1F9C5 /* HomeView.swift */,
+				FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -174,6 +185,7 @@
 				FA0587232B979F7300A1F9C5 /* HomeView.swift in Sources */,
 				FAD72CE02B89E0E000EFACDD /* IntroView.swift in Sources */,
 				FA11F8B62B982BB300C69531 /* NotesModel.swift in Sources */,
+				FA7C1E942B9F4405005E2E59 /* AddNoteView.swift in Sources */,
 				FA11F8B82B982D4E00C69531 /* NotesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
