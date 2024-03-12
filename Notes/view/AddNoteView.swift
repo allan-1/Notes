@@ -43,7 +43,7 @@ struct AddNoteView: View {
         .navigationTitle("Note")
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("You forgot something"), message: Text("Don't forget to add your Note title and Note"))
+            Alert(title: Text("Oops! You forgot something.."), message: Text("Don't forget to add your Note title and Note"))
         }
     }
     

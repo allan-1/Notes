@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NoteCard: View {
+    
+
     let note: NotesModel
     var body: some View {
         VStack(alignment: .leading){
@@ -24,7 +26,7 @@ struct NoteCard: View {
     }
     
     func deleteAction(){
-        
+
     }
 }
 

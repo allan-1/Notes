@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var router: Router
     
     @Binding var notesList: [NotesModel]
+
     
     var body: some View {
         VStack{
