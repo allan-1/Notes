@@ -30,7 +30,7 @@ struct AddNoteView: View {
             }.frame(maxWidth: .infinity, alignment: .trailing)
             Text(Date.now, format: .dateTime.day().month().year()).foregroundStyle(.orange).padding(EdgeInsets(top: 8, leading: 0, bottom: 10, trailing: 0))
             TextField("Note title", text: $noteTitle).focused($noteTitleFocus).font(.system(size: 20, weight: .bold)).padding(EdgeInsets(top: 4, leading: 0, bottom: 16, trailing: 0))
-            TextField("Write down something...", text: $notesText).focused($notesTextFocus)
+            TextField("Write down something...", text: $notesText, axis: .vertical).focused($notesTextFocus)
             Spacer()
         }
         .padding().navigationTitle("Note").navigationBarTitleDisplayMode(.inline)
