@@ -19,7 +19,11 @@ struct IntroView: View {
             Text("Organize your notes beautifically").font(.system(size: 16, weight: .regular, design: .monospaced)).padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             Button(action: nextPage){
                 Text("Continue")
-            }.buttonStyle(.borderedProminent)
+            }.buttonStyle(.borderedProminent).onAppear{
+                if UserDefaults.standard.string(forKey: "userName") != nil{
+                    router.navigate(to: .HomeView)
+                }
+            }
         }
     }
     
