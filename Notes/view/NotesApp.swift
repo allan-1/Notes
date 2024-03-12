@@ -11,6 +11,7 @@ import SwiftUI
 struct NotesApp: App {
     
     @ObservedObject var router = Router()
+    @StateObject private var store = NotesStore()
     
     var body: some Scene {
         WindowGroup {
@@ -18,9 +19,9 @@ struct NotesApp: App {
                 ContentView().navigationDestination(for: Router.Destinations.self){destination in
                     switch destination{
                     case .AddNotes:
-                        AddNoteView()
+                        AddNoteView(notesList: $store.notes)
                     case .HomeView:
-                        HomeView()
+                        HomeView(notesList: $store.notes)
                     case .IntroView:
                         IntroView()
                     case .WelcomeView:

@@ -13,6 +13,7 @@
 		FA11F8B82B982D4E00C69531 /* NotesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F8B72B982D4E00C69531 /* NotesStore.swift */; };
 		FA7C1E942B9F4405005E2E59 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */; };
 		FA7C1E992B9F4F3A005E2E59 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C1E982B9F4F3A005E2E59 /* Router.swift */; };
+		FA7C1E9B2BA097BE005E2E59 /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C1E9A2BA097BE005E2E59 /* NoteCard.swift */; };
 		FAD72CD02B89DE3100EFACDD /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD72CCF2B89DE3100EFACDD /* NotesApp.swift */; };
 		FAD72CD22B89DE3100EFACDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD72CD12B89DE3100EFACDD /* ContentView.swift */; };
 		FAD72CD42B89DE3400EFACDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD72CD32B89DE3400EFACDD /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		FA11F8B72B982D4E00C69531 /* NotesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStore.swift; sourceTree = "<group>"; };
 		FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		FA7C1E982B9F4F3A005E2E59 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FA7C1E9A2BA097BE005E2E59 /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
 		FAD72CCC2B89DE3100EFACDD /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD72CCF2B89DE3100EFACDD /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
 		FAD72CD12B89DE3100EFACDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				FA0587202B974B1400A1F9C5 /* Welcome.swift */,
 				FA0587222B979F7300A1F9C5 /* HomeView.swift */,
 				FA7C1E932B9F4405005E2E59 /* AddNoteView.swift */,
+				FA7C1E9A2BA097BE005E2E59 /* NoteCard.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				FA7C1E992B9F4F3A005E2E59 /* Router.swift in Sources */,
 				FAD72CE02B89E0E000EFACDD /* IntroView.swift in Sources */,
 				FA11F8B62B982BB300C69531 /* NotesModel.swift in Sources */,
+				FA7C1E9B2BA097BE005E2E59 /* NoteCard.swift in Sources */,
 				FA7C1E942B9F4405005E2E59 /* AddNoteView.swift in Sources */,
 				FA11F8B82B982D4E00C69531 /* NotesStore.swift in Sources */,
 			);

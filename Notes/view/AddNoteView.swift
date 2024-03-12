@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddNoteView: View {
     
+    @EnvironmentObject var router: Router
+    
     //note title
     @State private var noteTitle: String = ""
     @FocusState private var noteTitleFocus: Bool
@@ -16,6 +18,8 @@ struct AddNoteView: View {
     //notes
     @State private var notesText: String = ""
     @FocusState private var notesTextFocus: Bool
+    
+    @Binding var notesList: [NotesModel]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,10 +37,12 @@ struct AddNoteView: View {
     }
     
     func saveNote(){
-        
+        notesList.append(NotesModel(id: UUID(), title: noteTitle, note: notesText, dateCreated: Date.now))
+        print(notesList)
+        router.navigateBack()
     }
 }
 
-#Preview {
-    AddNoteView()
-}
+//#Preview {
+//    AddNoteView()
+//}

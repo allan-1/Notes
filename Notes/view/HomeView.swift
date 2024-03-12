@@ -11,9 +11,13 @@ struct HomeView: View {
     
     @EnvironmentObject var router: Router
     
+    @Binding var notesList: [NotesModel]
+    
     var body: some View {
         VStack{
-            
+            List($notesList) {
+                $notelist in NoteCard(note: notelist)
+            }
         }.navigationTitle("Saved Notes").navigationBarTitleDisplayMode(.large).navigationBarItems(trailing: addNotes).navigationBarBackButtonHidden(true)
     }
     
@@ -28,6 +32,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}
