@@ -23,10 +23,21 @@ struct Welcome: View {
             Button(action: continueToHome){
                 Text("Start")
             }.buttonStyle(.borderedProminent).padding()
-        }.navigationBarBackButtonHidden(true)
+        }.navigationBarBackButtonHidden(true) .onAppear {
+            // Check if name is saved in UserDefaults
+            if let savedName = UserDefaults.standard.string(forKey: "userName") {
+                // If saved, navigate to HomeView
+                name = savedName
+                continueToHome()
+            }
+        }
     }
     
     func continueToHome(){
+        
+        //save the users name to user defaulr
+        UserDefaults.standard.set(name, forKey: "userName")
+
         router.navigate(to: .HomeView, removeLast: true)
     }
 }
