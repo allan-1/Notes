@@ -21,6 +21,9 @@ struct AddNoteView: View {
     
     @Binding var notesList: [NotesModel]
     
+    // State variable to control the presentation of the alert
+    @State private var showAlert = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .trailing) {
@@ -30,18 +33,27 @@ struct AddNoteView: View {
             }.frame(maxWidth: .infinity, alignment: .trailing)
             Text(Date.now, format: .dateTime.day().month().year()).foregroundStyle(.orange).padding(EdgeInsets(top: 8, leading: 0, bottom: 10, trailing: 0))
             TextField("Note title", text: $noteTitle).focused($noteTitleFocus).font(.system(size: 20, weight: .bold)).padding(EdgeInsets(top: 4, leading: 0, bottom: 16, trailing: 0))
-            TextField("Write down something...", text: $notesText, axis: .vertical).focused($notesTextFocus)
+            TextField("Write down something...", text: $notesText).focused($notesTextFocus)
             Spacer()
         }
-        .padding().navigationTitle("Note").navigationBarTitleDisplayMode(.inline)
+        .padding()
+        .navigationTitle("Note")
+        .navigationBarTitleDisplayMode(.inline)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("You forgot something"), message: Text("Don't forget to add your Note title and Note"))
+        }
     }
     
     func saveNote(){
+        if noteTitle.isEmpty || notesText.isEmpty {
+            showAlert = true
+            return
+        }
         notesList.append(NotesModel(id: UUID(), title: noteTitle, note: notesText, dateCreated: Date.now))
-        print(notesList)
         router.navigateBack()
     }
 }
+
 
 //#Preview {
 //    AddNoteView()
