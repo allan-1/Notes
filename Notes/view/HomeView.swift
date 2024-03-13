@@ -17,7 +17,9 @@ struct HomeView: View {
     var body: some View {
         VStack{
             List($notesList) {
-                $notelist in NoteCard(note: notelist)
+                $notelist in NoteCard(note: notelist){
+                    notesList.removeAll(where: {$0.id == notelist.id})
+                }
             }
         }.navigationTitle("Saved Notes").navigationBarTitleDisplayMode(.large).navigationBarItems(trailing: addNotes).navigationBarBackButtonHidden(true)
     }

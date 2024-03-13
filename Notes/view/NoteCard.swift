@@ -11,6 +11,9 @@ struct NoteCard: View {
     
 
     let note: NotesModel
+    
+    let deleteNote: () -> Void
+    
     var body: some View {
         VStack(alignment: .leading){
             Text(note.title).font(.system(size: 20, weight: .bold))
@@ -26,10 +29,12 @@ struct NoteCard: View {
     }
     
     func deleteAction(){
-
+        deleteNote()
     }
 }
 
 #Preview {
-    NoteCard(note: NotesModel(id: UUID(), title: "Allan", note: "Allan", dateCreated: Date.now))
+    NoteCard(note: NotesModel(id: UUID(), title: "Allan", note: "Allan", dateCreated: Date.now)){
+        
+    }
 }
